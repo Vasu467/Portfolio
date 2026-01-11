@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hello, I am <span>Vasu</span> Garg</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="images/usict.jpeg" alt="">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>Hello! I am Vasu Garg, a 1st-year BTech student at University School Of Information Communication and Technology, GGSIPU. Currently, I am learning C language, DSA and web development. <br> Favourite sport- Cricket. <br> Favourite animal- Cats</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links onclick=" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span><br>Basics</li>
+                                <li><span>C language</span><br>Basics</li>
+                                <li><span>Web Development</span><br>Beginner</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Amity International School, Noida</span><br>2011-2015</li>
+                                <li><span>Delhi Public School RK Puram</span><br>2015-2025</li>
+                                <li><span>University School of information Communication and Technology, GGSIPU</span><br>2025-Present</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/todolist.png">
+                        <div class="layer">
+                            <h3>To-Do Application</h3>
+                            <p>Built a fully functional To-Do application where you can add tasks, edit them and delete them once the task is completed</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/weatherapp.png">
+                        <div class="layer">
+                            <h3>Weather Application</h3>
+                            <p>Built a fully functional Weather Application which when name of a city is entered, it shows the current temperature, wind speed, clouds percentage, max and min temperature, time of sunrise and sunset using API. The website also has a map which highlights the place that has been inputed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact Me</h1>
+                        <p><span>Email:</span> gargvasu2007@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/vasu-garg-170a15382/"><img src="images/linkedinlogo.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea type="Message" rows="6" placeholder="Your message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
